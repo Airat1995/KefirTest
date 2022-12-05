@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffc21fcdfe4b6473ca544b95ecc333fc, type: 3}
+  m_Name: PlayerStats
+  m_EditorClassIdentifier: 
+  _accelerationSpeed: 0.4
+  maxSpeed: 3
+  _deaccelerationSpeed: 0.6
+  _rotationSpeed: 0.9
+  _lazerWeapon: {fileID: 11400000, guid: 542955f3a89004183a0b85006c972214, type: 2}
+  _projectileWeapon: {fileID: 11400000, guid: 9ca9ea3d54da14a988bbbece8ec6c5cc, type: 2}

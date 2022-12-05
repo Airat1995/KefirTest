@@ -1,0 +1,18 @@
+{
+    "name": "MainUI",
+    "rootNamespace": "",
+    "references": [
+        "GUID:06a5b833a9b7540d6b4cce69480c5c82",
+        "GUID:5777be0d0e18741399c3a129118b474f",
+        "GUID:00c8a9154f007487ea179cd408be03eb"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
