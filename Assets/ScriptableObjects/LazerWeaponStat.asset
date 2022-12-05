@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c22bef9634b1442db53d3f5b4614c367, type: 3}
   m_Name: LazerWeaponStat
   m_EditorClassIdentifier: 
-  _timeToRecharge: 0.81
-  _maxRecharges: 10
+  _timeToRecharge: 1
+  _maxRecharges: 2
   _visibilityTime: 0.1

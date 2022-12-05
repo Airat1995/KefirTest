@@ -17,7 +17,7 @@ namespace KefirTest.System
             player.SubscribeOnCollide(EnemyCollide);
         }
 
-        private void EnemyCollide(Collider2D obj)
+        private void EnemyCollide(Collider2D obj, GameEntity gameEntity)
         {
             _pausable.Pause(true);
         }

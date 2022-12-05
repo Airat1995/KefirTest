@@ -65,10 +65,10 @@ namespace KefirTest.System
             Projectile projectile = _projectilePool.GetEntity();
             projectile.SetPosition(_player.GetPosition() + _player.GetForwardVector());
             projectile.SetRotation(_player.GetRotation());
-            _activeProjectiles.Add(projectile, new LifeTimeTimer
+            _activeProjectiles[projectile] = new LifeTimeTimer
             {
                 Time = _weaponStatSo.ProjectileStatSo.LiveTime
-            });
+            };
         }
 
         private void RemoveOldProjectiles(float deltaTime)
@@ -94,12 +94,13 @@ namespace KefirTest.System
             }
         }
 
-        private void CollisionCheck(Collider2D collider2D)
+        private void CollisionCheck(Collider2D collider2D, GameEntity projectile)
         {
             Enemy enemy = collider2D.GetComponent<Enemy>();
             if(enemy == null)
                 return;
             _enemyDestroyNotifier.EnemyDestroy(enemy, false);
+            _projectilePool.ReturnToPool((Projectile) projectile);
         }
 
         public void Reset()

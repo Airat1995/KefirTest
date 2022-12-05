@@ -1,6 +1,6 @@
 namespace KefirTest.View
 {
-    public interface IEnabling : IMovableElement
+    public interface IEnabling
     {
         void Enable(bool enable);
     }

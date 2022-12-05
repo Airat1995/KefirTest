@@ -8,7 +8,7 @@ namespace KefirTest.View
     {
         private static readonly Vector3 RotationAngle = new Vector3(0.0f, 0.0f, 1.0f);
 
-        private Action<Collider2D> _onCollision = (_) => { };
+        private Action<Collider2D, GameEntity> _onCollision = (_, _) => { };
         
         [SerializeField]
         private Collider2D _collider;
@@ -58,18 +58,18 @@ namespace KefirTest.View
             gameObject.SetActive(enable);
         }
 
-        public void SubscribeOnCollide(Action<Collider2D> onCollisionAction)
+        public void SubscribeOnCollide(Action<Collider2D, GameEntity> onCollisionAction)
         {
             _onCollision += onCollisionAction;
         }
         public void ClearSubscription()
         {
-            _onCollision = (_) => { };
+            _onCollision = (_, _) => { };
         }
 
         private void OnTriggerEnter2D(Collider2D col)
         {
-            _onCollision.Invoke(col);
+            _onCollision.Invoke(col, this);
         }
     }
 }
